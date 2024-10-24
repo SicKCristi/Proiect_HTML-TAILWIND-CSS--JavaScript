@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Scarlatescu Ionut-Cristian">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Proiectul 3 la TW">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/fe17765ad0.js" crossorigin="anonymous"></script>
+    <title>Implementarea temei</title>
+</head>
+<body>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+          <span class="font-semibold text-xl tracking-tight">PROIECTUL 3</span>
+        </div>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                HOME
+            </a>
+            <a href="canvas.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                CANVAS
+            </a>
+            <a href="bibliografie.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                BIBLIOGRAFIE
+            </a>
+          </div>
+        </div>
+      </nav>
+      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div class="pt-6 text-center space-y-4">
+          <blockquote>
+            <p class="mb-3 text-center text-gray-500 dark:text-gray-400 mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
+            Prima dată o să discutăm despre funcția selecteaza_imagine_caine().
+
+			      Această funcție este o promisiune (Promise) care obține o imagine aleatorie cu un câine 
+            folosind API-ul dog.ceo. 
+
+            Prin folosirea funcției fetch accesăm URL-ul specific pentru a obține răspunsul sub forma 
+            unui JSON.
+            În cazul în care obține o imagine cu succes, se rezolvă promisiunea cu URL-ul imaginii.
+
+            În cazul negativ, dacă apare o eroare în timpul fetch-ului sau procesării imaginii, 
+            se respinge promisiunea cu eroarea respectivă.
+            </p>
+          </blockquote>
+        </div>
+      </figure>
+      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div class="pt-6 text-center space-y-4">
+          <blockquote>
+            <p class="mb-3 text-center text-gray-500 dark:text-gray-400 mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
+              Acum este timpul să discutăm despre funcția conversieTonuriDeGri(ctx, canvas, startY, endY)
+
+              Este o funcție asincronă(așa cum a fost cerut în cerință) ce convertește o imagine în tonuri
+              de gri.
+
+              Primește un context (ctx) și un canvas, împreună cu valorile pentru a determina zona din 
+              imagine pe care o va converti la o nuanță de gri, ci mai exact, întreaga imagine.
+
+              Am folosit funcția ctx.getImageData pentru a obține datele pixelilor din zona respectivă 
+              a imaginii.
+
+              Vom aplica conversia la tonuri de gri prin calculul mediei valorilor RGB ale fiecărui pixel 
+              și vom seta valorile acestuia.
+
+              La final, prin folosirea ctx.putImageData vom actualiza imaginea cu tonurile de gri.
+
+              Rezolvarea promisiunii se va face abia după convertirea imaginii.
+            </p>
+          </blockquote>
+        </div>
+      </figure>
+      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div class="pt-6 text-center space-y-4">
+          <blockquote>
+            <p class="mb-3 text-center text-gray-500 dark:text-gray-400 mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
+              De asemenea, următoarea funcție despre care o să discutăm 
+              selecteaza_imagine_caine_si_oglindeste()
+
+              Este o funcție asincronă(la fel ca cea care convertește în tonuri de gri) care combină 
+              mai multe acțiuni pentru a obține, afișa și transforma imaginea cu cățelușul generat de JSON.
+
+              Această funcție se folosește de cealaltă funcție descrisă mai sus, ci mai exact de 
+              selecteaza_imagine_caine() pentru a obține URL-ul imaginii cu câine.
+
+              După obținerea URL-ului, se va încarca imaginea originală și imaginea oglindită în cadrul 
+              funcției onload pentru fiecare.
+
+              Folosește funcțiile deseneazaOriginal și deseneazaOglindit (care sunt definite în 
+              deseneaza_imagini.js) pentru a desena imaginile pe un canvas în file-ul canvas.html.
+
+              Rezolvă promisiunea după ce toate aceste acțiuni sunt finalizate.
+            </p>
+          </blockquote>
+        </div>
+      </figure>
+      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div class="pt-6 text-center space-y-4">
+          <blockquote>
+            <p class="mb-3 text-center text-gray-500 dark:text-gray-400 mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
+              Funcția deseneazaOriginal se ocupă de desenarea unei imagini pe un canvas specific. 
+              Primește un obiect imagine și îl plasează pe canvasul corespunzător în dimensiunile 
+              originale ale imaginii.
+
+              Pe de altă parte, deseneazaOglindit este o funcție mai complexă și este o promisiune. 
+              Aceasta primește o imagine și creează un efect de oglindire în patru etape pe un canvas 
+              specific. Procesul de oglindire constă în împărțirea imaginii în patru fâșii orizontale, 
+              apoi afișarea lor în oglindă într-o animație secvențială pe canvas.
+
+              Pentru fiecare fâșie din imaginea originală, funcția desenează o versiune oglindită a 
+              acelei fâșii pe canvas folosind funcția drawSlice. Acest proces este realizat în patru 
+              pași(așa cum este cerut în cerință), fiecare pașă afișând o fâșie din imaginea originală în oglindă.
+
+              Pentru a face acest lucru, funcția creează un canvas mai larg decât imaginea originală 
+              pentru a putea afișa imaginile oglindite într-o configurație alăturată. 
+              În interiorul funcției drawSlice, se calculează și se desenează secvențial fâșiile 
+              oglindite, reflectând în oglindă porțiuni egale din imaginea originală.
+
+              La finalizarea tuturor celor patru fâșii oglindite, promisiunea este rezolvată, indicând 
+              astfel finalizarea efectului de oglindire a imaginii pe canvas. Acest cod complex, 
+              prin separarea imaginii și reflectarea secvențială a fâșiilor, creează un efect de 
+              oglindire animat al imaginii pe canvas.
+            </p>
+          </blockquote>
+        </div>
+      </figure>
+      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div class="pt-6 text-center space-y-4">
+          <blockquote>
+            <p class="mb-3 text-center text-gray-500 dark:text-gray-400 mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
+              Această funcție, executaToateEtapele(), este o serie de acțiuni secvențiale sincronizate 
+              care măsoară timpul de execuție al diferitelor etape ale procesului.
+
+              Prima dată, vom vorbi despre funcția selectare imagine și oglindire():
+              Măsoară timpul începutului și sfârșitului pentru funcția 
+              selecteaza_imagine_caine_si_oglindeste() folosind performance.now().
+
+              Așteaptă finalizarea acestei funcții și calculează durata totală a acestei etape, 
+              actualizând informația despre timpul de execuție în DOM (Document Object Model).
+
+              A doua funcție care se execută este Oglindirea imaginii():
+              Măsoară timpul de început până la sfârșit folosind performance.now().
+              Calculează durata totală a acestei etape și actualizează informația legată de timp în DOM.
+
+              Ultima funcție este Transformarea imaginii în tonuri de gri():
+              La fel ca și în cazul celeorlate funcții, se calculează durata totală a acestei etape și 
+              se actualizează informația de timp în DOM.
+            </p>
+          </blockquote>
+        </div>
+      </figure>
+      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div class="pt-6 text-center space-y-4">
+          <blockquote>
+            <p class="mb-3 text-center text-gray-500 dark:text-gray-400 mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
+              Ultimul dar nu cel din urmă aspect din implementarea temei constă în faptul că în comparație
+              cu celelalte proiecte pe care le-am avut de realizat în cadrul acestei discipline, acum am 
+              folosit un FrameWork pentru CSS, ci mai exact Tailwind CSS. Folosirea lui este una destul de
+              simplă, deoarece majoritatea buildurilor sunt deja construite pentru ca programatorul să le
+              poată folosi direct, ceea ce scutește mult timp în ceea ce privește designul pe care trebuie să
+              îl aibă pagina. În folosirea acestuia, am folosit în 90% din cazuri documentația oficială, plus
+              am mai vizualizat câteva exemple ale altor programatori pentru a-mi crea o idee, care m-au 
+              ajutat să îmi 
+aranjez paginile mele.
+            </p>
+          </blockquote>
+        </div>
+      </figure>
+      <footer class="bg-teal-500 rounded-lg shadow m-4 dark:bg-gray-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-white text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+                © 2023 <a href="https://flowbite.com/" class="hover:underline">Site creat de Cristi ( cu ajutorul Tailwind CSS )</a> Toate drepturile îmi revin.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="../Proiectul 2/about.html" class="hover:underline me-4 md:me-6">ABOUT</a>
+            </li>
+            <li>
+                <a href="../Proiectul 2/portofolio.html" class="hover:underline me-4 md:me-6">PORTOFOLIO</a>
+            </li>
+            <li>
+                <a href="../Proiectul 2/contact.html" class="hover:underline me-4 md:me-6">CONTACT</a>
+            </li>
+        </ul>
+        </div>
+    </footer>
+</body>
+</html>

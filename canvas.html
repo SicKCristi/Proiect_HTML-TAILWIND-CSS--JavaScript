@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Scarlatescu Ionut-Cristian">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Proiectul 3 la TW">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/fe17765ad0.js" crossorigin="anonymous"></script>
+    <script src="selectare_imagine_caine.js"></script>
+    <script src="deseneaza_imagini.js"></script>
+    <script src="selecteaza_etapele.js"></script>
+    <title>Canvas</title>
+</head>
+<body>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+          <span class="font-semibold text-xl tracking-tight">PROIECTUL 3</span>
+        </div>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                HOME
+            </a>
+            <a href="implementarea_temei.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                IMPLEMENTAREA TEMEI
+            </a>
+            <a href="bibliografie.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                BIBLIOGRAFIE
+            </a>
+          </div>
+        </div>
+      </nav>
+      <br>
+
+    <button type="button" onclick="executaToateEtapele()" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+      Generarea, oglindirea și transformarea în gri:
+    </button>
+
+    <div class="grid grid-cols-3 gap-4">
+      <canvas id="canvasOriginal" class="w-100 h-auto"></canvas>
+      <canvas id="canvasMirrored" class="w-100 h-auto"></canvas>
+      <canvas id="canvasGrayscale" class="w-100 h-auto"></canvas>
+    </div>
+
+    <p class="mb-3 text-gray-500 dark:text-gray-400" id="timpExecutie"></p>
+
+    <footer class="bg-teal-500 rounded-lg shadow m-4 dark:bg-gray-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-white text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+                © 2023 <a href="https://flowbite.com/" class="hover:underline">Site creat de Cristi ( cu ajutorul Tailwind CSS )</a> Toate drepturile îmi revin.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="../Proiectul 2/about.html" class="hover:underline me-4 md:me-6">ABOUT</a>
+            </li>
+            <li>
+                <a href="../Proiectul 2/portofolio.html" class="hover:underline me-4 md:me-6">PORTOFOLIO</a>
+            </li>
+            <li>
+                <a href="../Proiectul 2/contact.html" class="hover:underline me-4 md:me-6">CONTACT</a>
+            </li>
+        </ul>
+        </div>
+    </footer>
+</body>
+</html>
